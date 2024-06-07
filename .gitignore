@@ -1,0 +1,10 @@
+# módulos
+node_modules
+
+# build
+build
+
+# environments
+.env
+
+coverage
