@@ -10,4 +10,16 @@ export class PrismaCheckInRepository implements CheckInRepository {
 
     return checkIn
   }
+
+  findByUserIdOndate(userId: string, date: Date): Promise<CheckIn | null> {
+    // const checkIn = prisma.checkIn.findUnique({
+    //   where: {
+    //     user_id: userId,
+    //     created_at: date,
+    //   },
+    // })
+
+    // return checkIn
+    throw new Error('Falta implementar o método')
+  }
 }
