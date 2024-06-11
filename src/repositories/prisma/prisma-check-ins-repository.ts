@@ -22,4 +22,12 @@ export class PrismaCheckInRepository implements CheckInRepository {
     // return checkIn
     throw new Error('Falta implementar o método')
   }
+
+  async findManyByUserId(userId: string): Promise<CheckIn[]> {
+    return await prisma.checkIn.findMany({
+      where: {
+        user_id: userId,
+      },
+    })
+  }
 }
