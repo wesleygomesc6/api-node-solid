@@ -4,6 +4,7 @@ import { z } from 'zod'
 const evnShema = z.object({
   NODE_ENV: z.enum(['dev', 'test', 'production']).default('dev'),
   PORT: z.coerce.number().default(3000),
+  JWT_SECRET: z.string(),
 })
 
 const _env = evnShema.safeParse(process.env)
