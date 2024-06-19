@@ -1,5 +1,3 @@
-version: "3"
-
 services:
   api-solid-pg:
     container_name: api-solid-pg
