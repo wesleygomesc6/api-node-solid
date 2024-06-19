@@ -21,7 +21,7 @@ export async function create(request: FastifyRequest, reply: FastifyReply) {
   const checkInUseCase = makeCheckInUseCase()
 
   const newChekcIn = await checkInUseCase.execute({
-    userLatiture: latitude,
+    userLatitude: latitude,
     userLongitude: longitude,
     gymId,
     userId: request.user.sub,

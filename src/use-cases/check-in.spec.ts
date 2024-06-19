@@ -35,7 +35,7 @@ describe('Check-in Use Case', () => {
     const { checkIn } = await sut.execute({
       gymId: 'qualquer',
       userId: 'coisa',
-      userLatiture: -16.6830525,
+      userLatitude: -16.6830525,
       userLongitude: -49.2537338,
     })
 
@@ -48,7 +48,7 @@ describe('Check-in Use Case', () => {
     await sut.execute({
       gymId: 'qualquer',
       userId: 'coisa',
-      userLatiture: -16.6830525,
+      userLatitude: -16.6830525,
       userLongitude: -49.2537338,
     })
 
@@ -56,7 +56,7 @@ describe('Check-in Use Case', () => {
       sut.execute({
         gymId: 'qualquer',
         userId: 'coisa',
-        userLatiture: -16.6830525,
+        userLatitude: -16.6830525,
         userLongitude: -49.2537338,
       }),
     ).rejects.toBeInstanceOf(Error)
@@ -68,7 +68,7 @@ describe('Check-in Use Case', () => {
     await sut.execute({
       gymId: 'qualquer',
       userId: 'coisa',
-      userLatiture: -16.6830525,
+      userLatitude: -16.6830525,
       userLongitude: -49.2537338,
     })
 
@@ -76,7 +76,7 @@ describe('Check-in Use Case', () => {
     const { checkIn } = await sut.execute({
       gymId: 'qualquer',
       userId: 'coisa',
-      userLatiture: -16.6830525,
+      userLatitude: -16.6830525,
       userLongitude: -49.2537338,
     })
 
@@ -100,7 +100,7 @@ describe('Check-in Use Case', () => {
       sut.execute({
         gymId: 'home',
         userId: 'coisa',
-        userLatiture: -16.6830525,
+        userLatitude: -16.6830525,
         userLongitude: -49.2537338,
       }),
     ).rejects.toBeInstanceOf(Error)
