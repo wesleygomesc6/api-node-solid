@@ -1,3 +1,4 @@
+
 name: Run E2E Tests
 
 on: [pull_request]
@@ -8,10 +9,10 @@ jobs:
     runs-on: ubuntu-latest
 
     services:
-      api-solid-pg:
+      postgres:
         image: bitnami/postgresql
         ports:
-        - 5432:5432
+          - 5432:5432
         env:
           POSTGRESQL_USERNAME: docker
           POSTGRESQL_PASSWORD: docker
@@ -23,7 +24,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 20
-          cache: "npm"
+          cache: 'npm'
 
       - run: npm ci
 
